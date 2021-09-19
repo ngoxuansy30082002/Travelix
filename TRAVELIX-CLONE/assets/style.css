@@ -86,7 +86,7 @@ html {
 .header-bot {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   margin-top: 35px;
   width: 100%;
   background-color: #350a4ecb;
@@ -183,16 +183,36 @@ html {
   font-family: "Beyond The Mountains";
   font-size: 100px;
 }
-.slider-explore-btn {
-  background: linear-gradient(to right, #fa9e1b, #8d4fff);
-  font-weight: 700;
-  padding: 17px 52px;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1px;
+.slider-explore-container {
+  width: 240px;
+  height: 54px;
+  overflow: hidden;
   border-radius: 50px;
+  position: relative;
 }
-.slider-explore-btn i {
+.slider-explore-text {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 17px;
+  left: 53px;
+  z-index: 100;
+  pointer-events: none;
+}
+.slider-explore-btn {
+  background-image: linear-gradient(to right, #fa9e1b, #8d4fff, #fa9e1b);
+  width: 480px;
+  height: 100%;
+  padding: 17px 52px;
+  transition: transform ease 0.3s;
+}
+.slider-explore-btn:hover {
+  transform: translateX(-50%);
+}
+
+.fas.fa-circle {
   font-size: 6px;
 }
 .two {
@@ -234,6 +254,60 @@ html {
   color: #fa9e1b;
   font-size: 30px;
   margin-right: 4px;
+}
+#input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #fa9e1b, #8d4fff);
+}
+#input div:first-child {
+  min-width: 394px;
+}
+.input-container {
+  display: inline-block;
+  margin: 0 6px;
+  padding: 58px 0;
+}
+.input-container h5 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 8px;
+  font-size: 12px;
+}
+.input-space-ipt {
+  min-width: 190px;
+  max-height: 44px;
+  padding: 14px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+#input div:first-child {
+  min-width: 394px;
+}
+#age {
+  min-width: 88px;
+  color: rgba(0, 0, 0, 0.74);
+  font-weight: bold;
+  max-height: 44px;
+  border: none;
+  outline: none;
+  padding: 13.5px;
+}
+.input-search {
+  display: inline-block;
+  background-color: #31124b;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 14.5px 62px;
+  font-size: 13px;
+  border-radius: 50px;
+  margin-top: 22.3px;
+  margin-left: 6px;
 }
 #content {
 }
