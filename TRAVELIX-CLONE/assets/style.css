@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Opensans-Ebold;
+  src: url(./fonts/OpenSans-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Opensans;
+  src: url(./fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: Opensans-bold;
+  src: url(./fonts/OpenSans-Bold.ttf);
+}
+@import url(//db.onlinewebfonts.com/c/41f5e8ff1d98d490a19c6d48ea7b74b1?family=Beyond+The+Mountains);
+@font-face {
+  font-family: "Beyond The Mountains";
+  src: url("//db.onlinewebfonts.com/t/41f5e8ff1d98d490a19c6d48ea7b74b1.eot");
+  src: url("//db.onlinewebfonts.com/t/41f5e8ff1d98d490a19c6d48ea7b74b1.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/41f5e8ff1d98d490a19c6d48ea7b74b1.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/41f5e8ff1d98d490a19c6d48ea7b74b1.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/41f5e8ff1d98d490a19c6d48ea7b74b1.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/41f5e8ff1d98d490a19c6d48ea7b74b1.svg#Beyond The Mountains")
+      format("svg");
+}
+html {
+  font-family: Opensans;
+}
+#main {
+}
+
+#header {
+}
+.header-top {
+  background-color: #350a4e;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #fff;
+}
+
+.phone-number {
+  padding-right: 45px;
+  margin-left: 88px;
+}
+.header-social li {
+  list-style-type: none;
+  display: inline-block;
+}
+.header-social li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+.header-social li:hover a {
+  color: #fa9e1b;
+}
+.header-acc {
+  display: flex;
+  margin-right: 88px;
+}
+.login:hover,
+.register:hover {
+  color: #fa9e1b;
+}
+.login {
+  padding: 0 6px;
+  border-right: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+}
+.register {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 6px;
+}
+.header-bot {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  margin-top: 35px;
+  width: 100%;
+  background-color: #350a4ecb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-transform: uppercase;
+  padding: 28px 88px 42px;
+}
+
+.logo {
+  font-size: 30px;
+  font-family: Opensans-Ebold;
+}
+.logo img {
+  max-width: 45px;
+  max-height: 45px;
+}
+.header-nav {
+  display: flex;
+}
+.header-nav li {
+  padding: 3px 1px;
+  margin: 0 17px;
+  list-style-type: none;
+}
+.header-nav li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Opensans-bold;
+  color: #fff;
+}
+.header-nav li a::after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 4px -3px 0;
+  background-color: transparent;
+}
+@keyframes header-nav {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-100%));
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    background: linear-gradient(to right, #fa9e1b, #8d4fff);
+  }
+}
+.header-nav li:hover a {
+  color: #ffd498;
+}
+.header-nav li:hover a::after {
+  animation: header-nav ease 0.3s forwards;
+}
+.search-btn {
+  padding: 10px;
+  margin-left: 85px;
+}
+.search-btn:hover i {
+  color: #fa9e1b;
+  cursor: pointer;
+}
+#slider {
+  background: url(./image/header/bg_header.webp) top center / cover no-repeat;
+  height: 590px;
+  position: relative;
+}
+.overlay {
+  background-color: #350a4e50;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.slider-heading {
+  font-size: 112px;
+  font-weight: 900;
+  font-family: Opensans-Ebold;
+  text-transform: uppercase;
+  margin-top: 110px;
+  max-height: 124px;
+}
+.slider-sub-heading {
+  font-family: "Beyond The Mountains";
+  font-size: 100px;
+}
+.slider-explore-btn {
+  background: linear-gradient(to right, #fa9e1b, #8d4fff);
+  font-weight: 700;
+  padding: 17px 52px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-radius: 50px;
+}
+.slider-explore-btn i {
+  font-size: 6px;
+}
+.two {
+  opacity: 0.8;
+}
+.three {
+  opacity: 0.5;
+}
+.navigation {
+  margin-top: 20px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  border-radius: 100px 100px 0 0;
+}
+.navigation li {
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 30px 50px;
+  transition: background-color 0.4s;
+}
+.navigation li:hover {
+  color: #fff;
+  background-color: #fa9e1b;
+}
+.navigation li:last-child {
+  border-radius: 0 100px 0 0;
+}
+.navigation li:first-child {
+  display: inline-block;
+  border-radius: 100px 0 0 0;
+}
+.navigation li:hover i {
+  color: #fff;
+}
+.slider-nav-icon {
+  color: #fa9e1b;
+  font-size: 30px;
+  margin-right: 4px;
+}
+#content {
+}
+
+#footer {
+}
