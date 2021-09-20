@@ -13,7 +13,7 @@
 <body>
     <div id="main">
         <div id="header">
-            <div class="header-top">
+            <headerTop class="header-top">
                     <ul class="header-social">
                         <li class="phone-number">+84 945 000 917</li>
                         <li><a href=" " class="social-icon ti-pinterest"></a></li>
@@ -28,8 +28,8 @@
                             <a href="" class="login">LOGIN</a>
                             <a href="" class="register">REGISTER</a>
                     </div>
-            </div>
-            <div class="header-bot">
+            </headerTop>
+            <headerBot class="header-bot">
                 <div class="logo">
                     <img src="./assets/image/header/logo.webp" alt="">
                     Travelix
@@ -44,7 +44,7 @@
                 <div class="search-btn">
                     <i class="fas fa-search"></i>
                 </div>
-            </div>
+            </headerBot>
 
         </div>
         <div id="slider">
@@ -131,5 +131,23 @@
         <div id="content"></div>
         <div id="footer"></div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+     
+      $(document).ready(function(){
+        $(window).scroll(function(){
+          if ($(this).scrollTop()){
+            $('headerBot').addClass('header-bot-sticky');
+            $('headerTop').addClass('header-top-hide');
+
+          } else{
+            $('headerBot').removeClass('header-bot-sticky');
+            $('headerTop').removeClass('header-top-hide');
+
+          }
+        });
+      });
+      
+    </script>
 </body>
 </html>

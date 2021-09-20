@@ -39,6 +39,12 @@ html {
 #header {
 }
 .header-top {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
   background-color: #350a4e;
   height: 36px;
   display: flex;
@@ -46,8 +52,13 @@ html {
   justify-content: space-between;
   font-size: 10px;
   color: #fff;
+  transition: transform ease-in-out 0.3s; /*animation cho header-top*/
 }
 
+.header-top-hide {
+  /* scroll thì js sẽ giúp thêm class này vào */
+  transform: translateY(-100%);
+}
 .phone-number {
   padding-right: 45px;
   margin-left: 88px;
@@ -87,17 +98,26 @@ html {
   position: fixed;
   top: 0;
   z-index: 2;
-  margin-top: 35px;
+  top: 0;
+  right: 0;
+  left: 0;
   width: 100%;
-  background-color: #350a4ecb;
+  background-color: #350a4e96;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
   text-transform: uppercase;
-  padding: 28px 88px 42px;
+  padding: 93px 88px 42px;
+  transform: translateY(-30px);
+  transition: all 0.5s ease-in-out; /*animation cho scroll header-bot*/
 }
-
+.header-bot-sticky {
+  /* scroll thì js sẽ giúp thêm class này vào */
+  background-color: #350a4edc;
+  padding: 50px 88px 22px;
+  /* margin-top: 0px; */
+}
 .logo {
   font-size: 30px;
   font-family: Opensans-Ebold;
@@ -140,7 +160,7 @@ html {
   }
 }
 .header-nav li:hover a {
-  color: #ffd498;
+  color: #fa9e1b;
 }
 .header-nav li:hover a::after {
   animation: header-nav ease 0.3s forwards;
@@ -155,7 +175,7 @@ html {
 }
 #slider {
   background: url(./image/header/bg_header.webp) top center / cover no-repeat;
-  height: 590px;
+  height: 627px;
   position: relative;
 }
 .overlay {
@@ -170,6 +190,7 @@ html {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 35px;
 }
 .slider-heading {
   font-size: 112px;
@@ -210,6 +231,7 @@ html {
 }
 .slider-explore-btn:hover {
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .fas.fa-circle {
@@ -238,6 +260,7 @@ html {
 }
 .navigation li:hover {
   color: #fff;
+  cursor: pointer;
   background-color: #fa9e1b;
 }
 .navigation li:last-child {
@@ -296,6 +319,9 @@ html {
   outline: none;
   padding: 13.5px;
 }
+#age:hover {
+  cursor: pointer;
+}
 .input-search {
   display: inline-block;
   background-color: #31124b;
@@ -308,6 +334,11 @@ html {
   border-radius: 50px;
   margin-top: 22.3px;
   margin-left: 6px;
+  transition: opacity ease 0.2s;
+}
+.input-search:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 #content {
 }
