@@ -33,6 +33,15 @@
 html {
   font-family: Opensans;
 }
+.ml6 {
+  margin-left: 6px;
+}
+.text-while {
+  color: #fff !important;
+}
+.width-200 {
+  width: 200px !important;
+}
 #main {
 }
 
@@ -41,7 +50,7 @@ html {
 .header-top {
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 5;
   top: 0;
   right: 0;
   left: 0;
@@ -97,7 +106,7 @@ html {
 .header-bot {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 4;
   top: 0;
   right: 0;
   left: 0;
@@ -204,32 +213,37 @@ html {
   font-family: "Beyond The Mountains";
   font-size: 100px;
 }
-.slider-explore-container {
+.btn-first-container {
   width: 240px;
-  height: 54px;
+  height: 50px;
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: 100px;
   position: relative;
 }
-.slider-explore-text {
+.btn-first-text {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   position: absolute;
   top: 17px;
-  left: 53px;
-  z-index: 100;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 3;
   pointer-events: none;
 }
-.slider-explore-btn {
+.btn-first-btn {
   background-image: linear-gradient(to right, #fa9e1b, #8d4fff, #fa9e1b);
-  width: 480px;
+  width: 200%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
   height: 100%;
   padding: 17px 52px;
   transition: transform ease 0.3s;
 }
-.slider-explore-btn:hover {
+.btn-first-btn:hover {
   transform: translateX(-50%);
   cursor: pointer;
 }
@@ -244,7 +258,7 @@ html {
   opacity: 0.5;
 }
 .navigation {
-  margin-top: 20px;
+  margin-top: 24px;
   background-color: #fff;
   color: #000;
   display: flex;
@@ -286,6 +300,7 @@ html {
 }
 #input div:first-child {
   min-width: 394px;
+  margin-left: -6px;
 }
 .input-container {
   display: inline-block;
@@ -308,7 +323,7 @@ html {
   width: 100%;
 }
 #input div:first-child {
-  min-width: 394px;
+  min-width: 382px;
 }
 #age {
   min-width: 88px;
@@ -322,25 +337,129 @@ html {
 #age:hover {
   cursor: pointer;
 }
-.input-search {
+.btn-second {
   display: inline-block;
   background-color: #31124b;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  padding: 14.5px 62px;
+  padding: 14.5px 60px;
   font-size: 13px;
   border-radius: 50px;
   margin-top: 22.3px;
-  margin-left: 6px;
+  max-height: 44px;
+
   transition: opacity ease 0.2s;
 }
-.input-search:hover {
+.btn-second:hover {
   opacity: 0.7;
   cursor: pointer;
 }
 #content {
+}
+
+.content__section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 90px 0 60px;
+}
+.content__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__heading {
+  font-size: 36px;
+  font-family: Opensans-bold;
+  margin-bottom: 22px;
+}
+
+.content__description {
+  font-size: 24px;
+  font-style: italic;
+  opacity: 0.6;
+}
+.content__items {
+  height: 426px;
+  width: 385px;
+  margin-top: 50px;
+  color: #fff;
+  position: relative;
+}
+.items-first {
+  background: url(./image/content/mauritius.jpg) top center / cover no-repeat;
+}
+
+.items-second {
+  background: url(./image/content/Greece.jpg) top center / cover no-repeat;
+}
+
+.items-third {
+  background: url(./image/content/scottlandd.jpg) top center / cover no-repeat;
+}
+
+.content__items__overlay {
+  /* background-color: #8d4fff8e; */
+  background-color: #4828856c;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 34px 0 17px;
+}
+
+.content__items__time {
+  font-size: 13px;
+  padding: 5px 40px;
+  background-color: #fa9e1b;
+  border-radius: 100px;
+}
+
+.content__items__place {
+  font-size: 59px;
+  font-family: Opensans-bold;
+}
+
+.content__items__cost {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.skin {
+  background-color: black;
+  opacity: 0.1;
+  height: 426px;
+  width: 385px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.star-first {
+  color: #ffeb8d;
+}
+
+.star-second {
+  color: #fed46b;
+}
+
+.star-third {
+  color: #fbb53d;
+}
+
+.star-four {
+  color: #fa9e1b;
+}
+
+.star-five {
+  color: #cecece;
 }
 
 #footer {
