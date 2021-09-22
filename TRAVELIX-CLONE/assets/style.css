@@ -629,7 +629,7 @@ html {
   transform: scale(1);
 }
 .feedback__section {
-  padding: 50px 0 0;
+  padding: 20px 0 60px;
 }
 .feedback__items {
   height: 536px;
