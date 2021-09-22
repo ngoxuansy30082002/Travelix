@@ -33,6 +33,7 @@
 html {
   font-family: Opensans;
 }
+
 .ml6 {
   margin-left: 6px;
 }
@@ -41,6 +42,24 @@ html {
 }
 .width-200 {
   width: 200px !important;
+}
+.f-size-14 {
+  font-size: 14px;
+}
+.f-size-36 {
+  font-size: 36px !important;
+}
+.f-size-16 {
+  font-size: 16px !important;
+}
+.f-style-italic {
+  font-style: italic !important;
+}
+.f-fa-bold {
+  font-family: Opensans-bold !important;
+}
+.mb-8 {
+  margin-bottom: 8px !important;
 }
 #main {
 }
@@ -142,6 +161,7 @@ html {
   padding: 3px 1px;
   margin: 0 17px;
   list-style-type: none;
+  overflow: hidden;
 }
 .header-nav li a {
   text-decoration: none;
@@ -183,7 +203,7 @@ html {
   cursor: pointer;
 }
 #slider {
-  background: url(./image/header/bg_header.webp) top center / cover no-repeat;
+  background: url(./image/header/bg_header.jpg) top center / cover no-repeat;
   height: 627px;
   position: relative;
 }
@@ -364,6 +384,7 @@ html {
   margin: 0 auto;
   text-align: center;
   padding: 90px 0 60px;
+  background-color: #fff;
 }
 .content__container {
   display: flex;
@@ -372,14 +393,13 @@ html {
 }
 
 .content__heading {
-  font-size: 36px;
+  font-size: 30px;
   font-family: Opensans-bold;
   margin-bottom: 22px;
 }
 
 .content__description {
   font-size: 24px;
-  font-style: italic;
   opacity: 0.6;
 }
 .content__items {
@@ -388,19 +408,30 @@ html {
   margin-top: 50px;
   color: #fff;
   position: relative;
+  overflow: hidden;
 }
-.items-first {
+.content-items-image {
+  position: absolute;
+
+  height: 426px;
+  width: 385px;
+  z-index: 0;
+  transition: all ease-in-out 0.3s;
+}
+.content-items-image-first {
   background: url(./image/content/mauritius.jpg) top center / cover no-repeat;
 }
-
-.items-second {
+.content-items-image-second {
   background: url(./image/content/Greece.jpg) top center / cover no-repeat;
 }
 
-.items-third {
-  background: url(./image/content/scottlandd.jpg) top center / cover no-repeat;
+.content-items-image-third {
+  background: url(./image/content/SANTORINI.jpg) top center / cover no-repeat;
 }
-
+.content__items:hover .content-items-image {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 .content__items__overlay {
   /* background-color: #8d4fff8e; */
   background-color: #4828856c;
@@ -412,6 +443,12 @@ html {
   justify-content: space-between;
   flex-direction: column;
   padding: 34px 0 17px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .content__items__time {
@@ -461,6 +498,202 @@ html {
 .star-five {
   color: #cecece;
 }
+.content__background {
+  background: url(./image/content/Bruised-Passports-Club-Med-Kani-Maldives-2.jpg)
+    top center / cover no-repeat;
+  height: 647px;
+  position: relative;
+}
+.content__blur {
+  padding: 126px 0;
+  /* background: linear-gradient(to right, #fa9e1b, #8d4fff); */
+  background: linear-gradient(to right, #fa9d1b94, #8d4fff96);
 
+  height: 647px;
+}
+.content__second {
+  height: 408px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.booknow-btn {
+  margin-top: 78px;
+}
+
+.content__box {
+  display: inline-flex;
+  width: 597px;
+  text-align: left;
+  position: relative;
+  margin-bottom: 70px;
+}
+.content__box__image {
+  background: url(./image/content/philippines_cebuisland.jpg) top center / cover
+    no-repeat;
+  height: 290px;
+  width: 290px;
+  flex: 1;
+  transition: all ease-in-out 0.3s;
+}
+.content__body {
+  flex: 1;
+  margin-left: 15px;
+}
+.content__body__cost {
+  display: inline-block;
+  color: #eda84a;
+  font-family: Opensans-bold;
+  margin-top: -12px;
+  margin-right: 10px;
+}
+.content__body__des {
+  opacity: 0.6;
+  margin: 16px 0;
+  line-height: 2;
+}
+.content__body__icon > img {
+  margin-right: 16px;
+}
+.readmore {
+  margin-top: 59px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: Opensans-bold;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+.content__box__info {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  bottom: 36px;
+  color: #fff;
+  padding: 6px 32px 12px;
+  background-color: #fa9e1b;
+  font-family: Opensans-bold;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.content__box__info:hover {
+  cursor: pointer;
+}
+.content__box__info p::after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 2px -40px -12px;
+  background-color: transparent;
+}
+@keyframes content__box {
+  from {
+    transform: translateX(calc(-100%));
+  }
+  to {
+    transform: translateX(0);
+    background: #ffffff;
+  }
+}
+
+.content__box__info:hover p::after {
+  animation: content__box ease 0.5s forwards;
+  cursor: pointer;
+}
+.content__box__img__container:hover .content__box__image {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.readmore:hover {
+  color: #fa9e1b;
+  cursor: pointer;
+}
+.box-second,
+.box-four {
+  margin-right: -20px;
+  margin-left: 20px;
+}
+.box-second .content__box__image {
+  background: url(./image/content/hil.jpg) top center / cover;
+}
+.box-third .content__box__image {
+  background: url(./image/content/island\ dream.jpg) top center / cover;
+}
+.box-four .content__box__image {
+  background: url(./image/content/travel\ light.jpg) top center / cover;
+}
+.feedback:hover .content-items-image {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.feedback__section {
+  padding: 50px 0 0;
+}
+.feedback__items {
+  height: 536px;
+  padding-top: 37px;
+}
+.feedback__image__first {
+  background: url(./image/content/feedback-img1.jpg) top center / cover;
+  height: 536px;
+}
+.feedback__image__second {
+  background: url(./image/content/feedback2.jpg) top center / cover;
+  height: 536px;
+}
+.feedback__image__third {
+  background: url(./image/content/feedback3.jpg) top center / cover;
+  height: 536px;
+}
+.feedback__overlay {
+  position: absolute;
+  height: 252px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #350a4edc;
+  padding: 48px 36px 0;
+  text-align: start;
+}
+.feedback__info {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: Opensans-bold;
+  text-align: start;
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 42px;
+  padding: 11px 21px;
+  margin-top: -39px;
+}
+.feedback__overlay h5 {
+  font-size: 20px;
+  padding: 0 0 16px 3px;
+}
+.feedback__overlay > p {
+  font-size: 14px;
+  line-height: 2;
+}
+.feedback__icon {
+  width: 74px;
+  height: 74px;
+  background-color: #fa9e1b;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 42px;
+  transition: all 0.2s;
+}
+.feedback__icon img {
+  margin-top: 18px;
+}
+.feedback__icon:hover {
+  background-color: #ffc522;
+}
 #footer {
 }
