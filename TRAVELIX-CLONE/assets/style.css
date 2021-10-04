@@ -33,7 +33,10 @@
 html {
   font-family: Opensans;
 }
-
+.box-mr {
+  margin-right: -20px;
+  margin-left: 20px;
+}
 .ml6 {
   margin-left: 6px;
 }
@@ -204,7 +207,7 @@ html {
 }
 #slider {
   background: url(./image/header/bg_header.jpg) top center / cover no-repeat;
-  height: 627px;
+  height: 100vh;
   position: relative;
 }
 .overlay {
@@ -220,6 +223,7 @@ html {
   justify-content: center;
   flex-direction: column;
   padding-top: 35px;
+  padding-bottom: 90px;
 }
 .slider-heading {
   font-size: 112px;
@@ -283,6 +287,8 @@ html {
   color: #000;
   display: flex;
   border-radius: 100px 100px 0 0;
+  position: absolute;
+  bottom: 0;
 }
 .navigation li {
   list-style-type: none;
@@ -610,11 +616,7 @@ html {
   color: #fa9e1b;
   cursor: pointer;
 }
-.box-second,
-.box-four {
-  margin-right: -20px;
-  margin-left: 20px;
-}
+
 .box-second .content__box__image {
   background: url(./image/content/hil.jpg) top center / cover;
 }
@@ -694,6 +696,118 @@ html {
 }
 .feedback__icon:hover {
   background-color: #ffc522;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #fa9e1b, #8d4fff);
+}
+.trending__section > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.place__trending__container {
+  width: 25%;
+  display: flex;
+  text-align: start;
+  margin-top: 50px;
+}
+.place__trending__body {
+  margin-left: 16px;
+}
+.place__trending__heading {
+  margin-top: -4px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: Opensans-bold;
+}
+.place__trending__heading:hover {
+  color: #fa9e1b;
+}
+.place__trending__cost {
+  margin: 5px 0;
+  font-family: Opensans-bold;
+  font-size: 14px;
+  color: #fa9e1b;
+}
+
+.place__trending__location {
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.place__trending__img {
+  overflow: hidden;
+}
+.place__trending__img img {
+  transition: all ease 0.3s;
+}
+.place__trending__img img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+#contact {
+  height: 100vh;
+  background: url(./image/contact/xcontact.png.pagespeed.ic.qi-ZwSUbp.png) top
+    center / cover;
+  position: relative;
+}
+.contact__container {
+  background: linear-gradient(to right, #fa9e1b, #8d4fff);
+  display: inline-block;
+  padding: 74px 48px 88px 48px;
+  border-radius: 7px;
+  position: absolute;
+  right: 76px;
+}
+
+.contact__heading {
+  font-size: 30px;
+  color: #fff;
+  font-family: Opensans-bold;
+  margin-bottom: 64px;
+}
+.contact__container input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #e1e1e1;
+  outline: none;
+  color: #fff;
+  height: 46px;
+  margin-bottom: 12px;
+}
+.contact__name,
+.contact__email {
+  min-width: 284px;
+}
+.contact__name {
+  margin-right: 24px;
+}
+.contact__subject,
+.contact__message {
+  display: block;
+  width: 100%;
+}
+.contact__message {
+  height: 113px !important;
+}
+.send-message {
+  margin-top: 56px;
+  min-height: 50px;
+}
+::placeholder {
+  /* chạy tốt trên Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* chạy trên Internet Explorer 10-11 */
+  color: rgb(255, 255, 255);
+}
+
+::-ms-input-placeholder {
+  /* chạy trên Microsoft Edge */
+  color: rgb(255, 255, 255);
 }
 #footer {
 }
