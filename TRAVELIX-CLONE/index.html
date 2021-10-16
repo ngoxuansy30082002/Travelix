@@ -23,10 +23,15 @@
 
   <body>
     <div id="main">
+      <div id="scroll-top">
+        <a href="#header">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
       <!-- -----------------------header-------------------------------------- -->
 
       <div id="header">
-        <headerTop class="header-top">
+        <headerTop class="header-top" id="header_top">
           <ul class="header-social">
             <li class="phone-number">+84 945 000 917</li>
             <li><a href=" " class="social-icon ti-pinterest"></a></li>
@@ -42,7 +47,7 @@
             <a href="" class="register">REGISTER</a>
           </div>
         </headerTop>
-        <headerBot class="header-bot">
+        <headerBot class="header-bot" id="header_bot">
           <div class="logo">
             <img src="./assets/image/header/logo.png" alt="" />
             Travelix
@@ -516,7 +521,7 @@
                 <img src="./assets/image/content/trending__place1.jpg" alt="" />
               </div>
               <div class="place__trending__body">
-                <h3 class="place__trending__heading">Grand hotel</h3>
+                <a href=" " class="place__trending__heading">Grand hotel</a>
                 <p class="place__trending__cost">From $182</p>
                 <p class="place__trending__location">Madrid, spain</p>
               </div>
@@ -526,7 +531,7 @@
                 <img src="./assets/image/content/trending__place2.jpg" alt="" />
               </div>
               <div class="place__trending__body">
-                <h3 class="place__trending__heading">Grand hotel</h3>
+                <a href=" " class="place__trending__heading">Grand hotel</a>
                 <p class="place__trending__cost">From $182</p>
                 <p class="place__trending__location">Madrid, spain</p>
               </div>
@@ -536,7 +541,7 @@
                 <img src="./assets/image/content/trending__place3.jpg" alt="" />
               </div>
               <div class="place__trending__body">
-                <h3 class="place__trending__heading">Grand hotel</h3>
+                <a href=" " class="place__trending__heading">Grand hotel</a>
                 <p class="place__trending__cost">From $182</p>
                 <p class="place__trending__location">Madrid, spain</p>
               </div>
@@ -546,7 +551,7 @@
                 <img src="./assets/image/content/trending__place4.jpg" alt="" />
               </div>
               <div class="place__trending__body">
-                <h3 class="place__trending__heading">Grand hotel</h3>
+                <a href=" " class="place__trending__heading">Grand hotel</a>
                 <p class="place__trending__cost">From $182</p>
                 <p class="place__trending__location">Madrid, spain</p>
               </div>
@@ -556,7 +561,7 @@
                 <img src="./assets/image/content/trending__place5.jpg" alt="" />
               </div>
               <div class="place__trending__body">
-                <h3 class="place__trending__heading">Grand hotel</h3>
+                <a href=" " class="place__trending__heading">Grand hotel</a>
                 <p class="place__trending__cost">From $182</p>
                 <p class="place__trending__location">Madrid, spain</p>
               </div>
@@ -566,7 +571,7 @@
                 <img src="./assets/image/content/trending__place6.jpg" alt="" />
               </div>
               <div class="place__trending__body">
-                <h3 class="place__trending__heading">Grand hotel</h3>
+                <a href=" " class="place__trending__heading">Grand hotel</a>
                 <p class="place__trending__cost">From $182</p>
                 <p class="place__trending__location">Madrid, spain</p>
               </div>
@@ -576,7 +581,7 @@
                 <img src="./assets/image/content/trending__place7.jpg" alt="" />
               </div>
               <div class="place__trending__body">
-                <h3 class="place__trending__heading">Grand hotel</h3>
+                <a href=" " class="place__trending__heading">Grand hotel</a>
                 <p class="place__trending__cost">From $182</p>
                 <p class="place__trending__location">Madrid, spain</p>
               </div>
@@ -586,7 +591,7 @@
                 <img src="./assets/image/content/trending__place8.jpg" alt="" />
               </div>
               <div class="place__trending__body">
-                <h3 class="place__trending__heading">Grand hotel</h3>
+                <a href=" " class="place__trending__heading">Grand hotel</a>
                 <p class="place__trending__cost">From $182</p>
                 <p class="place__trending__location">Madrid, spain</p>
               </div>
@@ -600,10 +605,18 @@
       <div id="contact">
         <div class="contact__container">
           <h1 class="contact__heading">GET IN TOUCH</h1>
-          <input class="contact__name" type="text" placeholder="Name" />
-          <input class="contact__email" type="email" placeholder="E-mail" />
+          <infor class="">
+            <input class="contact__name" type="text" placeholder="Name" />
+            <input class="contact__email" type="email" placeholder="E-mail" />
+          </infor>
           <input class="contact__subject" type="text" placeholder="Subject" />
-          <input class="contact__message" type="text" placeholder="Message" />
+          <textarea
+            name="contact__message"
+            id="contact__message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
           <div class="btn-second ml-6 send-message">
             send message
             <i class="one fas fa-circle"></i>
@@ -615,9 +628,92 @@
 
       <!-- -----------------------------footer---------------------------- -->
 
-      <div id="footer"></div>
+      <div id="footer">
+        <div class="footer__des">
+          <div class="logo">
+            <img src="./assets/image/header/logo.png" alt="" />
+            Travelix
+          </div>
+          <p class="footer__des__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna.
+            Integer eleme ntum orci eu vehicula pretium.
+          </p>
+          <ul class="footer__des__social">
+            <li><a href=" " class="social-icon ti-pinterest"></a></li>
+            <li><a href=" " class="social-icon ti-facebook"></a></li>
+            <li><a href=" " class="social-icon ti-twitter-alt"></a></li>
+            <li><a href=" " class="social-icon ti-dribbble"></a></li>
+            <li><a href=" " class="social-icon ti-instagram"></a></li>
+            <li><a href=" " class="social-icon ti-linkedin"></a></li>
+          </ul>
+        </div>
+        <div class="footer__blog">
+          <h3>Blog posts</h3>
+          <div class="footer__blog__section">
+            <img src="./assets/image/footer/footer-1.jpg" alt="" />
+            <div class="footer__blog__section__content">
+              <a href=" ">Travel with us this year</a>
+              <p>July 20, 2021</p>
+            </div>
+          </div>
+          <div class="footer__blog__section">
+            <img src="./assets/image/footer/footer-2.jpg" alt="" />
+            <div class="footer__blog__section__content">
+              <a href=" ">Travel with us this year</a>
+              <p>July 20, 2021</p>
+            </div>
+          </div>
+          <div class="footer__blog__section">
+            <img src="./assets/image/footer/footer-3.jpg" alt="" />
+            <div class="footer__blog__section__content">
+              <a href=" ">Travel with us this year</a>
+              <p>July 20, 2021</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__tag">
+          <h3>Tags</h3>
+          <a href="">design</a>
+          <a href="">fashion</a>
+          <a href="">music</a>
+          <a href="">video</a>
+          <a href="">party</a>
+          <a href="">photography</a>
+          <a href="">adventure</a>
+          <a href="">travel</a>
+        </div>
+        <div class="footer__info">
+          <h3>contact info</h3>
+          <div class="footer__info__section">
+            <i class="fas fa-map-marked-alt"></i>
+            <a href=""> Viet Nam</a>
+          </div>
+          <div class="footer__info__section">
+            <i class="fas fa-envelope-open-text"></i>
+            <a href="mailto:ngoxuansy30082002@gmail.com"
+              >ngoxuansy30082002@gmail.com</a
+            >
+          </div>
+          <div class="footer__info__section">
+            <i class="fas fa-phone-volume"></i>
+            <a href="tel: +84 945 999 917"> +84 945 999 917</a>
+          </div>
+          <div class="footer__info__section">
+            <i class="fas fa-globe-americas"></i>
+            <a href=""> www.cokhibkbongangsangit.com</a>
+          </div>
+        </div>
+        <p class="end">
+          Copyright © 2021 By<span
+            style="font-family: Opensans-bold; color: #fa9e1b; font-size: 16px"
+          >
+            Syxn</span
+          >
+        </p>
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
       $(document).ready(function () {
         $(window).scroll(function () {
@@ -630,6 +726,26 @@
           }
         });
       });
+    </script> -->
+    <script>
+      var header_top = document.getElementById("header_top");
+      var header_bot = document.getElementById("header_bot");
+      var scroll_top = document.getElementById("scroll-top");
+      window.onscroll = function () {
+        "use strict";
+        if (
+          document.body.scrollTop >= 100 ||
+          document.documentElement.scrollTop >= 200
+        ) {
+          header_top.classList.add("header-top-hide");
+          header_bot.classList.add("header-bot-sticky");
+          scroll_top.classList.add("scroll-top");
+        } else {
+          header_bot.classList.remove("header-bot-sticky");
+          header_top.classList.remove("header-top-hide");
+          scroll_top.classList.remove("scroll-top");
+        }
+      };
     </script>
   </body>
 </html>
